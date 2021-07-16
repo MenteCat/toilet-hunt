@@ -1,4 +1,5 @@
 import React from 'react';
+import ToiletCard from './ToiletCard';
 export default function SearchToilets() {
   //states -input query, toilets, hooks
   const [query, setQuery] = useState('');
@@ -30,18 +31,7 @@ export default function SearchToilets() {
     </form>
     <div className="card-list">
       {toilets.map(toilet => (
-        <div className="card" key={toilet.id}>
-          <img className="card--image"
-          src={`${toilet.image_path}`}
-          alt={toilet.title + ` image`}
-          />
-          <div className="card--content">
-            <h3 className="card--title">(toilet.title)</h3>
-            <p><small>LATEST UPDATE: {toilet.latest_update}</small></p>
-            <p><small>RATING: {toilet.vote_avarage}</small></p>
-            <p className="card--description">{toilet.overview}</p>
-          </div>
-        </div>
+        <ToiletCard toilet={toilet} key={toilet.id}/>
       ))}
     </div>
     </>
