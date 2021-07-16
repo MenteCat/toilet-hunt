@@ -5,15 +5,10 @@ export default function ToiletCard(props) {
   // so that we can use the object property referencing the code below
   return (
     <div className="card">
-    <img className="card--image"
-        src={`${toilet.image_path}`}
-        alt={toilet.title + ` image`}
-    />
     <div className="card--content">
-      <h3 className="card--title">(toilet.title)</h3>
-      <p><small>LATEST UPDATE: {toilet.latest_update}</small></p>
-      <p><small>RATING: {toilet.vote_avarage}</small></p>
-      <p className="card--description">{toilet.overview}</p>
+      <h3 className="card--title">{toilet.borough_name}</h3>
+      <p><small>STREET NAME: {toilet.street_name == null ? 'Ops! No street name has been added yet.' : toilet.street_name}</small></p>
+      <p><small>POSTCODE: {toilet.postcode == null ? 'Ops! No postcode has been added yet.' : toilet.postcode}</small></p>
     </div>
   </div>
 
