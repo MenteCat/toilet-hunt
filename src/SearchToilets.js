@@ -31,7 +31,7 @@ export default function SearchToilets() {
     <>
 
     <form className="form" onSubmit={searchToilets}>
-      <label className="label" htmlFor="query">Postcode</label>
+      <label className="label" htmlFor="query">Postcode or Street</label>
       <input className="input" type="text" name="query"
       placeholder="i.e. TW2" value={query} onChange={(e) => setQuery(e.target.value)} />
       <button className="button" type="submit">Search</button>
