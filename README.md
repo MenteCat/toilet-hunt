@@ -2,7 +2,7 @@
 Simple React search app acting as a frontend for a Ruby on [Rails Toilets REST API](https://github.com/MenteCat/public-toilets-api).
 
 ## How to run the App
-`cd` into the main app folder and run the app in the local environment on port 3000 with  with `npm start`; the React app will be available in the browser at the following address: `http://localhost:3000`.
+`cd` into the main app folder and run the app in the local environment on port 3000 with `npm start`; the React app will be available in the browser at the following address: `http://localhost:3000`.
 
 The app consumes data from a Rails REST API backend, which has to be available on the same host, on port 8000.
 Natively, both React and Rails will try to run their local servers on port 3000, so we have to change the port Rails uses in order to avoid them to overlap.
